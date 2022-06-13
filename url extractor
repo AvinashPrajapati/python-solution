@@ -1,25 +1,15 @@
 import re
-
 string = ""
 
 regex = r'('
-# Scheme (HTTP, HTTPS, FTP and SFTP):
 regex += r'(?:(https?|s?ftp):\/\/)?'
-# www:
 regex += r'(?:www\.)?'
 regex += r'('
-
-# Host and domain (including ccSLD):
 regex += r'(?:(?:[A-Z0-9][A-Z0-9-]{0,61}[A-Z0-9]\.)+)'
-# TLD:
 regex += r'([A-Z]{2,6})'
-# IP Address:
 regex += r'|(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'
 regex += r')'
-
-# Port:
 regex += r'(?::(\d{1,5}))?'
-# Query path:
 regex += r'(?:(\/\S+)*)'
 regex += r')'
 
