@@ -1,0 +1,4 @@
+from slugify import slugify
+s = "Adding dynamic image from text on Qr code."
+r = slugify(s)
+print(r)
